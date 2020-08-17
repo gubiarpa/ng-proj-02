@@ -1,12 +1,12 @@
 <h1>Héroes <small>Marvel y DC</small></h1>
 <hr>
 <div class="card-columns">
-    <div class="card container">
-        <img src="assets/img/aquaman.png" alt="Card image cap" class="card-img-top img-fluid">
-        <div class="card-block">
-            <h4 class="card-title">Card Title</h4>
-            <p class="card-text">This card has supporting text below as a natural</p>
-            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    <div class="card" *ngFor="let hero of heroes">
+        <img [src]="hero.img" [alt]="hero.nombre" class="card-img-top img-fluid">
+        <div class="card-block mt-2">
+            <h4 class="card-title">{{ hero.nombre }}</h4>
+            <p class="card-text">{{ hero.bio }}</p>
+            <p class="card-text"><small>{{ hero.aparicion }}</small></p>
 
             <button type="button" class="btn btn-outline-primary btn-block">
                 Ver más...
