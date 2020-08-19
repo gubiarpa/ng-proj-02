@@ -13,11 +13,10 @@ export class HeroeComponent implements OnInit {
   heroe: any = {};
 
   constructor( private _activatedRoute: ActivatedRoute,
-               private _heroesService: HeroesService) { 
+               private _heroesService: HeroesService) {
     this._activatedRoute.params.subscribe( params => {
       this.heroe = this._heroesService.getHeroe( params['id'] );
-      console.log(this.heroe);
-    } );
+    });
   }
 
   ngOnInit(): void {

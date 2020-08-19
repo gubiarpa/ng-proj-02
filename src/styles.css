@@ -2,8 +2,14 @@ body {
   padding-bottom: 50px;
 }
 
+.navbar {
+  width: 100%;
+  top: 0%;
+  z-index: 1;
+}
+
 .main-container {
-    margin-top: 20px;
+    margin-top: 70px;
 }
 
 /* Animaciones */
