@@ -1,7 +1,7 @@
-<h1>{{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+<h1 class="animated fadeIn">{{heroe.nombre}} <small>({{heroe.aparicion | date:'y'}})</small></h1>
 <hr>
 
-<div class="row">
+<div class="row animated fadeIn fast">
     <div class="col-md-4">
         <img [src]="heroe.img" [alt]="heroe.nombre" [title]="heroe.nombre" class="img-fluid">
         <br><br>
@@ -9,10 +9,14 @@
     </div>
 
     <div class="col-md-8">
-        <h3>Nombre Héroe</h3>
+        <h3>{{heroe.nombre}}</h3>
         <hr>
         <p>
             {{ heroe.bio }}
         </p>
+        <div>
+            <img class="img-logo" *ngIf="heroe.casa=='Marvel'" src="https://upload.wikimedia.org/wikipedia/commons/0/04/MarvelLogo.svg" [alt]="heroe.casa">
+            <img class="img-logo" *ngIf="heroe.casa=='DC'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/DC_Comics_logo.svg/1200px-DC_Comics_logo.svg.png" [alt]="heroe.casa">
+        </div>
     </div>
 </div>
