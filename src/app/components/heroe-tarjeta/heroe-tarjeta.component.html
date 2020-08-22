@@ -1,1 +1,12 @@
-<p>heroe-tarjeta works!</p>
+<div class="card animated fadeIn fast">
+    <img [src]="hero.img" [alt]="hero.nombre" class="card-img-top img-fluid">
+    <div class="card-block mt-2">
+        <h4 class="card-title">{{ hero.nombre }}</h4>
+        <p class="card-text">{{ hero.bio }}</p>
+        <p class="card-text"><small>{{ hero.aparicion }}</small></p>
+        <!--  -->
+        <button type="button" (click)="verHeroe()" class="btn btn-outline-primary btn-block">
+            Ver más...
+        </button>
+    </div>
+</div>
